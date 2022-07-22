@@ -6,15 +6,59 @@
 
 html{
     font-size: 62.5%;
+    height: 100vh;
 }
 
 body{
     font-size: 1.6rem;
-    background-color: bisque;
+    background-color: darkslategray;
     font-family: sans-serif;
 }
 
+
+
 #principal{
-    border: .2rem solid black;
+    border: .4rem solid black;
+    margin: 0 auto;
+    margin-top: 15rem;
+    padding: 3rem; 
+
+    display: flex;
+    flex-direction: column;
     
+    border-radius: 2rem;
 }
+
+.titulo{
+    text-align: center;
+    font-size: 3rem;
+    color: aliceblue;
+}
+.cuerpo{
+    display: flex;
+    flex-direction: column;
+}
+
+.igu .bot{
+    margin-top: 3rem;
+}
+
+.bot{
+    height: 5rem;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+}
+
+.bot:hover{
+    color: aliceblue;
+    cursor: pointer;
+    box-shadow: 1rem 1rem 3rem black;
+}
+
+.bot a{
+    color: cadetblue;
+    text-decoration: none;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
