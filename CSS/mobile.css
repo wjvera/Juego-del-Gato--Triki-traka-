@@ -11,10 +11,9 @@ html{
 
 body{
     font-size: 1.6rem;
-    background-color: darkslategray;
+    background-color: white;
     font-family: sans-serif;
 }
-
 
 
 #principal{
@@ -29,47 +28,128 @@ body{
     border-radius: 2rem;
 }
 
-.titulo{
+.imagen{
     text-align: center;
     font-size: 3rem;
     color: aliceblue;
 }
+
+.imagen img{
+    height: 130px;
+}
 .cuerpo{
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .igu .bot{
     margin-top: 3rem;
 }
 
-.bot{
-    height: 5rem;
-    border-radius: 2rem;
-    border: 2px solid transparent;
-}
-
-.bot:hover{
-    color: aliceblue;
-    cursor: pointer;
-    box-shadow: 1rem 1rem 3rem black;
-}
 
 .bot a{
-    color: cadetblue;
     text-decoration: none;
-    font-size: 3rem;
-    font-weight: bold;
+    transition: 0.5s;
+}
+
+.bot{
+    position: relative;
+    width: 30rem;
+    height: 6rem;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    transition: 0.2s;
+}
+
+
+.bot:hover{
+    cursor: pointer;
+    background: #ec0b36 url('/assets/pixel.png');
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: animate 0.3s steps(8) forwards;
+    
+}
+
+.bot:nth-child(2):hover{
+    cursor: pointer;
+    background: url('/assets/pixel2.png');
+    transition-delay: 0.8s;
+    background-size: 180px;
+    animation: animate 0.3s steps(8) forwards;
+    
+}
+.bot a:hover{
+    color: black;
+}
+
+@keyframes animate{
+    0%{
+        background-position-y: 0;
+    }
+    100%{
+        background-position-y: -480px;
+    }
+}
+
+
+
+@media screen and (min-width: 400px){
+    #principal{
+        width: 40rem;
+    }
+    .bot{
+        width: 30rem;
+    }
 }
 
 @media screen and (min-width: 500px){
     #principal{
         width: 50rem;
     }
+    .bot{
+        width: 40rem;
+    }
+    .bot a{
+        font-size: 2rem;
+    }
+    .imagen img{
+        height: 14rem;
+    }
+
+}
+
+@media screen and (min-width: 600px){
+    #principal{
+        width: 60rem;
+    }
+    .bot{
+        width: 50rem;
+    }
+    .bot a{
+        font-size: 3rem;
+    }
+    .imagen img{
+        height: 15rem;
+    }
 }
 
 @media screen and (min-width: 800px){
     #principal{
+        width: 80rem;
+    }
+    .bot{
         width: 70rem;
+    }
+    .bot a{
+        font-size: 4rem;
+    }
+    .imagen img{
+        height: 16rem;
     }
 }
